@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="back-button"
+          defaultHref="/user-home"
+          text="Volver"
+          mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">DATO CURIOSO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-title class="ion-padding card-title">¿Sabías que se puede generar luz con los escrementos de tu perro?</ion-card-title>
+    <ion-card-content #cc class="ion-padding card-content">
+      En Malvern Hills, distrito y área natural del centro de Inglaterra, el inventor Brian Harper logró sacar adelante con financiación local un proyecto de digestor modular con producción de biogás para alumbrar las farolas con dichos excrementos.
+      Todo surgió al comprobar Harper que tanto las cacas de los animales, como las bolsas en las que algunos dueños las recogían, quedaban por el suelo y afeaban el Malvern Hills Area of Outstanding Natural Beauty. Esta zona del interior de Inglaterra es famosa por sus colinas y por el agua de manantial que fluye desde ellas.
+      Según el vídeo que subió la BBC en su información, cada excremento se recoge con una bolsa de papel que posteriormente se deposita en un recipiente. Luego se da varias veces a una manivela para iniciar la descomposición de los excrementos en un digestor anaerobio que produce biogás para iluminar las farolas cercanas.
+    </ion-card-content> 
+  </ion-card>
+  <ion-card>
+    <img [src]="dataImg" alt="dog" *ngIf="dataImg" /> 
+  </ion-card>
+  <ion-button type="button" (click)="getRandomDog()" expand="block" shape="round">
+    ¡Sopréndete!
+  </ion-button>
+
+
+</ion-content>

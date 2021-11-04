@@ -1,0 +1,53 @@
+
+ion-header{
+    --ion-background-color:#8badaa;
+}
+
+ion-content{
+    --ion-background-color:#dfe9ef;
+}
+
+ion-card{
+    --ion-background-color: white;
+}
+
+ion-button{
+    --background: #3cc5ba;
+    font-family: "Dreams bold";
+}
+
+.back-button {
+    color:#845c3d;
+    font-family: "Dreams bold";
+}
+
+.title{
+    font-family: "Leixo";
+    color:rgb(255, 255, 255);
+
+}
+
+.label {
+    font-family: "Dreams bold";
+    text-align: center;
+    //color:#845c3d;
+    color: #237770;
+    font-size: x-large;
+
+}
+    
+.label-form {
+    font-family: "Dreams bold";
+    //color:#845c3d;
+    color: #237770;
+    font-size: medium;
+}
+
+.form-button{
+    background-color: blueviolet;
+}
+
+.form-input{
+    font-family: "Dreams bold";
+    color: rgb(43, 42, 42);
+}

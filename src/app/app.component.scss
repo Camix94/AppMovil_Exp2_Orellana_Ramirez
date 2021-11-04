@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Dreams Bold";
+    src: url(../assets/fonts/DreamOrphans_bd.ttf);
+}
+
+@font-face {
+    font-family: "Leixo";
+    src: url(../assets/fonts/LEIXO.ttf);
+}
+
+ion-header{
+    --ion-background-color:#6caca6;
+}
+
+ion-content{
+    --ion-background-color:#c7dfee;
+}
+
+.menu {
+    font-family: "Dreams bold";
+    color:#845c3d;
+}
+
+.icon {
+    color:#866a54;
+}
+
+.title1{
+    font-family: "Leixo";
+    color:rgb(255, 255, 255);
+}

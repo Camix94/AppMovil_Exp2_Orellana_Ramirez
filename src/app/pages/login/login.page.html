@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="back-button"
+          defaultHref="/home"
+          text="Volver"
+          mode="ios"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title class="title">Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-content>
+ 
+      <form #formLogin="ngForm" (ngSubmit)="login()">
+        <ion-item>
+          <ion-label class="label-form" position="floating">Email: </ion-label>
+          <ion-input class="form-input" name="email" type="email" placeholder="Email"
+                    name="email" [(ngModel)]= "user.email"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                    required>
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="label-form" position="floating">Password: </ion-label>
+          <ion-input class="form-input" name="password" type="password" placeholder="Contraseña"
+                    name="password" [(ngModel)]= "user.password"
+                    required>
+          </ion-input>
+        </ion-item>
+
+        <ion-button type="submit" [disabled] ="formLogin.invalid" expand="block" shape="round">
+          Login
+        </ion-button>
+
+      </form>
+
+    </ion-card-content>  
+  </ion-card>
+  
+</ion-content>

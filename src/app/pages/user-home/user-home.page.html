@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="menu-button" (click)="mostrarMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline">
+        </ion-icon>       
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="menu-button" (click)="salir()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title1">GREN ENERGY</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br><br>
+  <div>
+    <p class="saludo">Bienvenido:</p>
+    <p class="saludo">{{ nombre }}</p>
+  </div>
+  <br><br>
+  <ion-img src="assets/img/inicio.jpg"></ion-img>
+  <br><br><br><br>
+  
+
+</ion-content>
