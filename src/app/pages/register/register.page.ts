@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/pages/interfaces/interface';
 import { FirebaseauthService } from 'src/app/services/firebaseauth.service';
 import { Router } from '@angular/router'
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
@@ -21,7 +22,8 @@ export class RegisterPage implements OnInit {
 
   constructor(
     public firebaseauthService: FirebaseauthService,
-    public router: Router
+    public router: Router,
+    public toastController: ToastController
     ) { }
 
   async ngOnInit() {
@@ -32,8 +34,8 @@ export class RegisterPage implements OnInit {
         return;
       }
     });
-    const uid = await this.firebaseauthService.getUid();
-    console.log(uid);
+    //const uid = await this.firebaseauthService.getUid();
+    //console.log(uid);
   }
 
   async registrarse(){
@@ -42,6 +44,7 @@ export class RegisterPage implements OnInit {
       password: this.usuario.password,
     };
     const res = await this.firebaseauthService.registrar(credenciales.email, credenciales.password).catch( err => {
+      this.presentToast(`Email ya registrado. Inicie sesión`);
       console.log( 'error ->', err)
     }); 
     const uid = await this.firebaseauthService.getUid();
@@ -65,6 +68,14 @@ export class RegisterPage implements OnInit {
     //const uid = await this.firebaseauthService.getUid();
     //console.log(uid);
     this.firebaseauthService.logout();
+  }
+
+  async presentToast(alerta: string) {
+    const toast = await this.toastController.create({
+      message: alerta,
+      duration: 3000
+    });
+    toast.present();
   }
 
 
