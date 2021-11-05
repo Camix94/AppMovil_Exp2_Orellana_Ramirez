@@ -1,4 +1,5 @@
-# AppMovil_Orellana_Ramirez
+Integrantes: Camila Orellana - José Luis Ramírez
+Proyecto: Gren Energy
 
 Instrucciones para el funcionamientos de la APP:
 1.- Debe ejecutar en la consola el comando npm install @angular/fire firebase --save
